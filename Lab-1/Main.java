@@ -31,8 +31,8 @@ public class Main {
         String weatherConditions;
         String precipitationPossibility;
         String windSpeed;
-        double DayHighTemp;
-        double DayLowTemp;
+        double dayHighTemp;
+        double dayLowTemp;
         int UVIndex;
 
         /*
@@ -41,12 +41,44 @@ public class Main {
         - Validate numeric input using loops
         - Example: Ensure highTemp >= lowTemp
         */
- 
+        
  
         // TODO: Prompt user and read input
         // TODO: Use loops to validate high/low temperatures and UV index
- 
- 
+
+        // two boolean vars to validate input using while loop
+        boolean isWeatherValid = false;
+        boolean isUVIndexValid = false;
+
+        
+        System.out.println("Enter today's weather conditions: ");
+        weatherConditions = input.nextLine();
+        System.out.println("Enter today's precipation chance : ");
+        precipitationPossibility = input.nextLine();
+        System.out.println("Enter today's wind speed: ");
+        windSpeed = input.nextLine();
+
+        while(!isWeatherValid) {
+            System.out.println("Enter today's day high temperature: ");
+            dayHighTemp = input.nextDouble();
+            System.out.println("Enter today's day low temperature: ");
+            dayLowTemp = input.nextDouble();
+            if(dayHighTemp > dayLowTemp) {
+                isWeatherValid = true;
+            } else {
+                System.out.println("You've entered wrong data.Try again!");
+            }
+        }
+        while(!isUVIndexValid) {
+            System.out.println("Enter today's UV index: ");
+            UVIndex = input.nextInt();
+            if (UVIndex > 0 && UVIndex < 11) {
+                isUVIndexValid = true;
+            } else {
+                System.out.println("You've entered wrong data.Try again!");
+            }
+        }
+        
         /*
         STEP 3: Typecasting (if needed)
         - Example: if you read a double but want to display as int
