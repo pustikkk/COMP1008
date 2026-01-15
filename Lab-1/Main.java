@@ -28,8 +28,13 @@ public class Main {
  
  
         // TODO: Declare your variables here
- 
- 
+        String weatherConditions;
+        String precipitationPossibility;
+        String windSpeed;
+        double DayHighTemp;
+        double DayLowTemp;
+        int UVIndex;
+
         /*
         STEP 2: Get input from the user using Scanner
         - Ask for each variable above
