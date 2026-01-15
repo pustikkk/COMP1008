@@ -31,8 +31,8 @@ public class Main {
         String weatherConditions;
         String precipitationPossibility;
         String windSpeed;
-        double dayHighTemp;
-        double dayLowTemp;
+        double dayHighTemp = 0;
+        double dayLowTemp = 0;
         int UVIndex;
 
         /*
@@ -72,7 +72,7 @@ public class Main {
         while(!isUVIndexValid) {
             System.out.println("Enter today's UV index: ");
             UVIndex = input.nextInt();
-            if (UVIndex > 0 && UVIndex < 11) {
+            if (UVIndex > 0 && UVIndex <= 11) {
                 isUVIndexValid = true;
             } else {
                 System.out.println("You've entered wrong data.Try again!");
@@ -87,7 +87,9 @@ public class Main {
  
         // TODO: Apply typecasting where necessary
  
- 
+        System.out.println("Today day high temp is " + (int)dayHighTemp + " and day low temp is " + (int)dayLowTemp);
+
+
         /*
         STEP 4: Conditional statements
         - Example: 
