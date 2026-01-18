@@ -58,20 +58,48 @@ public class Main {
         windSpeed = input.nextLine();
 
         while(!isDayTempValid) {
-            System.out.println("Enter today's day high temperature: ");
-            dayHighTemp = input.nextDouble();
-            System.out.println("Enter today's day low temperature: ");
-            dayLowTemp = input.nextDouble();
+
+
+            while(true) {
+                try {
+                    System.out.println("Enter today's day high temperature: ");
+                    dayHighTemp = Double.parseDouble(input.nextLine());
+                    break;
+                } catch(NumberFormatException e) {
+                    System.out.println("You've entered wrong credentials for today's day high temp. try again");
+                }
+            }
+
+            while(true) {
+                try {
+                    System.out.println("Enter today's day low temperature: ");
+                    dayLowTemp = Double.parseDouble(input.nextLine());
+                    break;
+                } catch(NumberFormatException e) {
+                    System.out.println("You've entered wrong credentials for today's day low temp. try again");
+                }
+            }
+
+
             if(dayHighTemp > dayLowTemp) {
                 isDayTempValid = true;
             } else {
-                System.out.println("You've entered wrong data.Try again!");
+                System.out.println("Day low temp cannot be higher than day high temp.Try again!");
             }
         }
+
+
         while(!isUVIndexValid) {
-            System.out.println("Enter today's UV index: ");
-            UVIndex = input.nextInt();
-            if (UVIndex > 0 && UVIndex <= 11) {
+            while(true) {
+                try {
+                    System.out.println("Enter today's UV index (ex. 6): ");
+                    UVIndex = Integer.parseInt(input.nextLine());
+                    break;
+                } catch (NumberFormatException e) {
+                    System.out.println("You entered invalid number, try again!");
+                }
+            }
+            if (UVIndex >= 0 && UVIndex <= 11) {
                 isUVIndexValid = true;
             } else {
                 System.out.println("You've entered wrong data.Try again!");
