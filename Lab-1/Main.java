@@ -59,6 +59,7 @@ public class Main {
 
         while(!isDayTempValid) {
 
+            // this part of code tries to get a valid integer value for a day high temp from user
 
             while(true) {
                 try {
@@ -69,7 +70,7 @@ public class Main {
                     System.out.println("You've entered wrong credentials for today's day high temp. try again");
                 }
             }
-
+            // this part of code tries to get a valid integer value for a day low temp from user
             while(true) {
                 try {
                     System.out.println("Enter today's day low temperature: ");
@@ -80,7 +81,7 @@ public class Main {
                 }
             }
 
-
+            // checks if conditions met and if not goes through the loop again
             if(dayHighTemp > dayLowTemp) {
                 isDayTempValid = true;
             } else {
@@ -90,6 +91,10 @@ public class Main {
 
 
         while(!isUVIndexValid) {
+            /* kinda the same pattern here, first the program checks
+            *   if the user entered required value type(could be a 100 for instance, wil be valid as in integer)
+            *   and then after it successfully passed the value checks how realistic that number(ex. 100 cannot be the value for UV index)
+            */
             while(true) {
                 try {
                     System.out.println("Enter today's UV index (ex. 6): ");
@@ -127,7 +132,6 @@ public class Main {
 
 
         // TODO: Write if, if-else, or nested if statements to display tips
-
         if(UVIndex >= 6) {
             System.out.println("Use sunscreen");
         }
@@ -191,7 +195,11 @@ public class Main {
         - Combine all user inputs and tips into one formatted sentence or paragraph
         - Use String concatenation (+) or String.format()
         */
- 
+        String fullReport = "Weather conditions: " + weatherConditions +
+                            "\nPrecipitation chance: " + precipitationPossibility + "%"+
+                            "\nWind speed: " + windSpeed + " km/h" +
+                            "\nDay time high: " + dayHighTemp +" and day time low: " + dayLowTemp +
+                            "\nUV index: " + UVIndex;
  
         // TODO: Construct your full weather report here
  
@@ -199,7 +207,7 @@ public class Main {
         /*
         STEP 6: Print the full weather report
         */
- 
+        System.out.println(fullReport);
  
         // TODO: Output your report using System.out.println()
  
