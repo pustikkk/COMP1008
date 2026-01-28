@@ -22,6 +22,7 @@ public class Main {
                 "cereals",
                 "Chocolate",
                 "Watermelon",
+                "Eggs",
         };
 
 
@@ -53,10 +54,11 @@ public class Main {
         groceryList.add("Pizza");
         groceryList.add("apple");
         groceryList.remove(2);
-        System.out.println("Your updated array list:");
+        System.out.println(" Your updated array list:");
         for (String item : groceryList) {
-            System.out.println(item + "\n");
+            System.out.println("*  " + item);
         }
+        System.out.println();
 
 
 
@@ -88,7 +90,10 @@ public class Main {
         // ================================================
         // STEP 6: Print the final results
         // ================================================
-
+        System.out.println("Your final array list contains " + count + " vowels \nYour final array list is:");
+        for (String item : groceryList) {
+            System.out.println("*  " +item);
+        }
 
     }
 }
