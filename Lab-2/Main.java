@@ -11,12 +11,15 @@ public class Main {
         // Add at least 6 items to the array
         // Example: {"Milk", "Eggs", "Bread", ... }
         // ================================================
+
+        // used both capitalize/uncapitalized words so it will
+        // be more interesting at step 5
         String[] groceries = {
                 // TODO: Fill in your grocery items
-                "Grapes",
+                "grapes",
                 "Banana",
-                "Bread",
-                "Cereals",
+                "bread",
+                "cereals",
                 "Chocolate",
                 "Watermelon",
         };
@@ -25,7 +28,8 @@ public class Main {
         // ================================================
         // STEP 2: Print the array using Arrays.toString()
         // ================================================
-        System.out.println(Arrays.toString(groceries));
+        System.out.println(Arrays.toString(groceries) + "\n");
+
 
 
         // ================================================
@@ -46,7 +50,13 @@ public class Main {
         // Remove one item by name or index
         // Print the updated ArrayList
         // ================================================
-
+        groceryList.add("Pizza");
+        groceryList.add("apple");
+        groceryList.remove(2);
+        System.out.println("Your updated array list:");
+        for (String item : groceryList) {
+            System.out.println(item);
+        }
 
 
 
