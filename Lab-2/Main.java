@@ -13,6 +13,12 @@ public class Main {
         // ================================================
         String[] groceries = {
                 // TODO: Fill in your grocery items
+                "Grapes",
+                "Banana",
+                "Bread",
+                "Cereals",
+                "Chocolate",
+                "Watermelon",
         };
 
 
