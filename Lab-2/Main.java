@@ -33,7 +33,9 @@ public class Main {
         // Use a loop to add each item
         // ================================================
         ArrayList<String> groceryList = new ArrayList<>();
-
+        for (String item : groceries) {
+            groceryList.add(item);
+        }
         // TODO: Loop through the array and add items to groceryList
 
 
