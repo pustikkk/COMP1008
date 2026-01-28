@@ -1,21 +1,24 @@
+/*
 import java.util.Scanner;
  
  
+*/
 /*
     Week 2 Lab: Weather Report Program
     Topics: Conditional statements, loops, typecasting, input validation
     Objective: Ask the user for weather info, validate input, and display a full report
-*/
+*//*
+
 
  // Aleksei Pustovoit
  
 public class Main {
     public static void main(String[] args) {
- 
         boolean startNewReport = true;
         Scanner input = new Scanner(System.in);
         while (startNewReport) {
-        /*
+        */
+/*
         STEP 1: Declare variables for weather information
         a) Today's weather conditions (String)
         b) Possibility of precipitation (String)
@@ -23,7 +26,8 @@ public class Main {
         d) Daily high temperature (int or double)
         e) Daily low temperature (int or double)
         f) UV index (int)
-        */
+        *//*
+
  
  
         // TODO: Declare your variables here
@@ -34,12 +38,14 @@ public class Main {
         double dayLowTemp = 0;
         int UVIndex = 0;
 
-        /*
+        */
+/*
         STEP 2: Get input from the user using Scanner
         - Ask for each variable above
         - Validate numeric input using loops
         - Example: Ensure highTemp >= lowTemp
-        */
+        *//*
+
         
  
         // TODO: Prompt user and read input
@@ -91,10 +97,12 @@ public class Main {
 
 
         while(!isUVIndexValid) {
-            /* kinda the same pattern here, first the program checks
+            */
+/* kinda the same pattern here, first the program checks
             *   if the user entered required value type(could be a 100 for instance, wil be valid as in integer)
             *   and then after it successfully passed the value checks how realistic that number(ex. 100 cannot be the value for UV index)
-            */
+            *//*
+
             while(true) {
                 try {
                     System.out.println("Enter today's UV index (ex. 6): ");
@@ -111,10 +119,12 @@ public class Main {
             }
         }
         
-        /*
+        */
+/*
         STEP 3: Typecasting (if needed)
         - Example: if you read a double but want to display as int
-        */
+        *//*
+
  
  
         // TODO: Apply typecasting where necessary
@@ -122,13 +132,15 @@ public class Main {
         System.out.println("Today day high temp is " + (int)dayHighTemp + " and day low temp is " + (int)dayLowTemp);
 
 
-        /*
+        */
+/*
         STEP 4: Conditional statements
         - Example: 
           - If UV index >= 6, suggest "Use sunscreen"
           - If precipitation >= 50%, suggest "Carry an umbrella"
           - If wind speed > 40 km/h, suggest "Windy conditions"
-        */
+        *//*
+
 
 
         // TODO: Write if, if-else, or nested if statements to display tips
@@ -136,10 +148,12 @@ public class Main {
             System.out.println("Use sunscreen");
         }
 
-        /* Since I'm supposed to use string type for wind speed and
+        */
+/* Since I'm supposed to use string type for wind speed and
          *   precipitation chance, I assume that I should parse them into an integer value and then
          *   use these values for if-else statements above
-         * */
+         * *//*
+
 
         // bool var for validating the value of Precipitation chance
         boolean isPrecipitationValid = false;
@@ -190,11 +204,13 @@ public class Main {
             }
         }
  
-        /*
+        */
+/*
         STEP 5: Create a fullReport String
         - Combine all user inputs and tips into one formatted sentence or paragraph
         - Use String concatenation (+) or String.format()
-        */
+        *//*
+
         String fullReport = "Weather conditions: " + weatherConditions +
                             "\nPrecipitation chance: " + precipitationPossibility + "%"+
                             "\nWind speed: " + windSpeed + " km/h" +
@@ -204,19 +220,23 @@ public class Main {
         // TODO: Construct your full weather report here
  
  
-        /*
-        STEP 6: Print the full weather report
         */
+/*
+        STEP 6: Print the full weather report
+        *//*
+
         System.out.println(fullReport);
  
         // TODO: Output your report using System.out.println()
  
  
-        /*
+        */
+/*
         STEP 7: Optional extra challenge
         - Use loops to ask if the user wants to enter another day's report
         - Continue until the user types "no"
-        */
+        *//*
+
 
         // TODO: Implement loop for multiple reports
         // This block of code will ask whether user wants to do a weather report for another day
@@ -256,4 +276,4 @@ public class Main {
         input.close();
     }
 }
- 
+ */
