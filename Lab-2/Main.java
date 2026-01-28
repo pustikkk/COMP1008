@@ -25,7 +25,7 @@ public class Main {
         // ================================================
         // STEP 2: Print the array using Arrays.toString()
         // ================================================
-
+        System.out.println(Arrays.toString(groceries));
 
 
         // ================================================
