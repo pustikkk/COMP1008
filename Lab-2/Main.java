@@ -55,7 +55,7 @@ public class Main {
         groceryList.remove(2);
         System.out.println("Your updated array list:");
         for (String item : groceryList) {
-            System.out.println(item);
+            System.out.println(item + "\n");
         }
 
 
@@ -65,7 +65,24 @@ public class Main {
         // Hint: vowels = a, e, i, o, u
         // Use .toLowerCase(). startsWith()
         // ================================================
-
+        int count = 0;
+        for (String item : groceryList) {
+            if(item.toLowerCase().startsWith("a")) {
+                count++;
+            }
+            else if(item.toLowerCase().startsWith("e")) {
+                count++;
+            }
+            else if(item.toLowerCase().startsWith("i")) {
+                count++;
+            }
+            else if(item.toLowerCase().startsWith("o")) {
+                count++;
+            }
+            else if(item.toLowerCase().startsWith("u")) {
+                count++;
+            }
+        }
 
 
         // ================================================
