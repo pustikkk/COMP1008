@@ -10,6 +10,7 @@ public class Librarymanager {
     }
     ArrayList<Book> books = new ArrayList<>();
 
+
     public void addBook() {
         Book book = new Book();
         boolean isInputValid = false;
@@ -75,6 +76,10 @@ public class Librarymanager {
     }
     public void returnBook(Book book) {
         book.setAvailable(true);
+    }
+
+    public boolean exit(boolean exit) {
+        return exit;
     }
 
 }
