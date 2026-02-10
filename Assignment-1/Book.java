@@ -40,30 +40,37 @@ public class Book {
     }
 
     // Simple setters
-    public void setTitle(String title) {
+    public boolean setTitle(String title) {
         if(!(title.isBlank())) {
             this.title = title;
             System.out.println("You successfully changed title to " + title);
+            return true;
         } else {
+            // if it is invalid title returns false
             System.out.println("You entered invalid title");
+            return false;
         }
     }
 
-    public void setAuthor(String author) {
+    public boolean setAuthor(String author) {
         if(!(author.isBlank())) {
             this.author = author;
             System.out.println("You successfully changed author's name to " + author);
+            return true;
         } else {
             System.out.println("You entered invalid author's name");
+            return false;
         }
     }
 
-    public void setIsbn(String isbn) {
+    public boolean setIsbn(String isbn) {
         if(isbn.length() == 10 || isbn.length() == 13) {
             this.isbn = isbn;
             System.out.println("You successfully changed isbn number to " + isbn);
+            return true;
         } else {
             System.out.println("You entered invalid isbn number");
+            return false;
         }
     }
 
