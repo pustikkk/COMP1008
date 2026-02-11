@@ -1,3 +1,5 @@
+package Assignment1;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,7 +14,6 @@ public class Librarymanager {
         books.add(new Book("The Great Gatsby", "F. Scott Fitzgerald", "9780743273565", true));
         books.add(new Book("Harry Potter and the Sorcerer's Stone", "J.K. Rowling", "9780590353427", true));
         books.add(new Book("The Catcher in the Rye", "J.D. Salinger", "9780316769488", false));
-        addBook();
     }
     ArrayList<Book> books = new ArrayList<>();
     boolean wantExit = false;
@@ -63,6 +64,7 @@ public class Librarymanager {
                 System.out.println("Title: " + book.getTitle());
                 System.out.println("Author: " + book.getAuthor());
                 System.out.println("ISBN number: " + book.getIsbn());
+                System.out.println();
             }
         }
         System.out.println("Checked out books:");
@@ -71,6 +73,7 @@ public class Librarymanager {
                 System.out.println("Title: " + book.getTitle());
                 System.out.println("Author: " + book.getAuthor());
                 System.out.println("ISBN number: " + book.getIsbn());
+                System.out.println();
             }
         }
     }
@@ -80,15 +83,28 @@ public class Librarymanager {
                 System.out.println("Title: " + book.getTitle());
                 System.out.println("Author: " + book.getAuthor());
                 System.out.println("ISBN number: " + book.getIsbn());
+                System.out.println();
             }
         }
     }
 
-    public void checkOutBook(Book book) {
-        book.setAvailable(false);
+    public boolean checkOutBook(String title) {
+        for (Book book : books) {
+            if(book.getTitle().equalsIgnoreCase(title)) {
+                book.setAvailable(false);
+                return true;
+            }
+        }
+        return false;
     }
-    public void returnBook(Book book) {
-        book.setAvailable(true);
+    public boolean returnBook(String title) {
+        for (Book book : books) {
+            if(book.getTitle().equalsIgnoreCase(title)) {
+                book.setAvailable(true);
+                return true;
+            }
+        }
+        return false;
     }
 
     public void searchByAuthor(String author) {
