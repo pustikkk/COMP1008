@@ -14,13 +14,18 @@ public class StudentValidatorLab {
             // =====================================================
 
 
-            // STEP 1:
-            // Ask user to enter full name
+
             boolean isNameValid = false;
             String fullNameValidation = "^[A-Za-z ]+$";
             while(!isNameValid) {
-                System.out.println("Enter your full name");
+                System.out.print("Enter your full name: ");
+                // STEP 1:
+                // Ask user to enter full name
                 String fullName = scanner.nextLine();
+                // STEP 2:
+                // Validate name
+                // Only letters and spaces allowed
+                // Use regex with matches()
                 if(fullName.matches(fullNameValidation)) {
                     isNameValid = true;
                 } else {
@@ -30,10 +35,10 @@ public class StudentValidatorLab {
 
 
 
-            // STEP 2:
-            // Validate name
-            // Only letters and spaces allowed
-            // Use regex with matches()
+
+
+
+
 
 
 
@@ -42,16 +47,22 @@ public class StudentValidatorLab {
             // PART 2 — STUDENT ID VALIDATION
             // Format: S-1234
             // =====================================================
+            boolean isStudentIdValid = false;
+            while(!isStudentIdValid) {
+                // STEP 3:
+                // Ask user to enter student ID
+                System.out.print("Enter your student ID: ");
+                String studentID = scanner.nextLine();
+                // STEP 4:
+                // Validate format using regex
+            }
 
 
-            // STEP 3:
-            // Ask user to enter student ID
 
 
 
 
-            // STEP 4:
-            // Validate format using regex
+
 
 
 
