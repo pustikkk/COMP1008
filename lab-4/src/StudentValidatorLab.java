@@ -17,9 +17,15 @@ public class StudentValidatorLab {
             // STEP 1:
             // Ask user to enter full name
             boolean isNameValid = false;
+            String fullNameValidation = "^[A-Za-z ]+$";
             while(!isNameValid) {
                 System.out.println("Enter your full name");
                 String fullName = scanner.nextLine();
+                if(fullName.matches(fullNameValidation)) {
+                    isNameValid = true;
+                } else {
+                    System.out.println("Your input is wrong, try again!");
+                }
             }
 
 
