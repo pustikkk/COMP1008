@@ -29,7 +29,7 @@ public class StudentValidatorLab {
                 if(fullName.matches(fullNameValidation)) {
                     isNameValid = true;
                 } else {
-                    System.out.println("Your input is wrong, try again!");
+                    System.out.println("Your full name format is wrong, try again!");
                 }
             }
 
@@ -48,6 +48,7 @@ public class StudentValidatorLab {
             // Format: S-1234
             // =====================================================
             boolean isStudentIdValid = false;
+            String studentIdValidation = "^S-\\d{4}$";
             while(!isStudentIdValid) {
                 // STEP 3:
                 // Ask user to enter student ID
@@ -55,6 +56,11 @@ public class StudentValidatorLab {
                 String studentID = scanner.nextLine();
                 // STEP 4:
                 // Validate format using regex
+                if(studentID.matches(studentIdValidation)) {
+                    isStudentIdValid = true;
+                } else {
+                    System.out.println("Your student ID format is wrong, try again!");
+                }
             }
 
 
