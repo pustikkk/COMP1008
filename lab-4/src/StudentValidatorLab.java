@@ -16,7 +16,11 @@ public class StudentValidatorLab {
 
             // STEP 1:
             // Ask user to enter full name
-
+            boolean isNameValid = false;
+            while(!isNameValid) {
+                System.out.println("Enter your full name");
+                String fullName = scanner.nextLine();
+            }
 
 
 
