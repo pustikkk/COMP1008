@@ -107,7 +107,8 @@ public class StudentValidatorLab {
 
             // STEP 7:
             // Ask user to enter a sentence
-
+            System.out.println("Enter a sentence:");
+            String sentence = scanner.nextLine();
 
 
 
