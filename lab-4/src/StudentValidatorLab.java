@@ -131,7 +131,8 @@ public class StudentValidatorLab {
 
             // STEP 9:
             // Reverse sentence using StringBuilder
-
+            StringBuilder sb = new StringBuilder(sentence);
+            System.out.println(sb.reverse());
 
 
 
