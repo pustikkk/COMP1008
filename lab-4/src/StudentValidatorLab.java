@@ -114,9 +114,16 @@ public class StudentValidatorLab {
 
             // STEP 8:
             // Count vowels using Character class
-            String vowels = "aeiou";
+            String[] vowels = {"a","e", "i","o","u"};
             int vowelsCounter = 0;
             for (int i = 0; i <= sentence.length(); i++) {
+                char letter = sentence.charAt(i);
+                for(String vowel : vowels) {
+                    if(vowel.equalsIgnoreCase(String.valueOf(letter))) {
+                        vowelsCounter += 1;
+                        break;
+                    }
+                }
 
             }
 
