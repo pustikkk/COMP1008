@@ -131,14 +131,20 @@ public class StudentValidatorLab {
 
             // STEP 9:
             // Reverse sentence using StringBuilder
-            StringBuilder sb = new StringBuilder(sentence);
-            System.out.println(sb.reverse());
+            StringBuilder sentenceSb = new StringBuilder(sentence);
+            System.out.println(sentenceSb.reverse());
 
 
 
             // STEP 10:
             // Replace all digits in sentence with '*'
-
+            StringBuilder sentenceSb1 = new StringBuilder(sentence);
+            for (int i = 0; i <= sentenceSb1.length(); i++) {
+                if(Character.isDigit(sentenceSb1.charAt(i))) {
+                    sentenceSb1.replace(i, i + 1,"*");
+                }
+            }
+            System.out.println(sentenceSb1);
 
 
 
