@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class StudentValidatorLab {
 
@@ -174,6 +176,14 @@ public class StudentValidatorLab {
             // STEP 12:
             // Create string: "Invoice number is 4567 and total is 890"
             // Use Pattern and Matcher to extract all numbers
+            String invoice = "Invoice number is 4567 and total is 890";
+            Pattern pattern = Pattern.compile("\\d+");
+            Matcher matcher = pattern.matcher(invoice);
+            while(matcher.find()) {
+                int num = Integer.parseInt(matcher.group());
+                System.out.println(num);
+            }
+
 
 
 
